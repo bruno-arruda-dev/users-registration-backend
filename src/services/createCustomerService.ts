@@ -9,7 +9,7 @@ class CreateCustomerService{
     async execute({name, email}: CreateCustomerProps){
 
         if(!name || !email) {
-            throw new Error("Preencha todosos campos")
+            throw new Error("Preencha todos os campos");
         }
 
         const custumer = await prismaClient.customer.create({
